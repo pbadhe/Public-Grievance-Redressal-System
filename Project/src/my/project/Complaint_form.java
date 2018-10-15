@@ -129,7 +129,23 @@ public class Complaint_form extends javax.swing.JFrame {
         jRadioButton16 = new JRadioButton();
         jButton1 = new JButton();
         jPanel3 = new JPanel();
+        jLabel7 = new JLabel();
+        jLabel9 = new JLabel();
+        jTextField3 = new JTextField();
+        jLabel10 = new JLabel();
+        jTextField4 = new JTextField();
+        jLabel11 = new JLabel();
+        jTextField5 = new JTextField();
+        jLabel12 = new JLabel();
+        jScrollPane2 = new JScrollPane();
+        jTextArea1 = new JTextArea();
+        jButton2 = new JButton();
+        jButton3 = new JButton();
         jPanel4 = new JPanel();
+        jLabel13 = new JLabel();
+        jButton4 = new JButton();
+        jLabel14 = new JLabel();
+        jButton5 = new JButton();
 
         jTextField1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -173,7 +189,7 @@ public class Complaint_form extends javax.swing.JFrame {
 
         jRadioButton3.setText("Floating Algae");
 
-        jRadioButton4.setText("Human Generated Waste");
+        jRadioButton4.setText("Human/Animal Waste");
         jRadioButton4.addChangeListener(new ChangeListener() {
             public void stateChanged(ChangeEvent evt) {
                 jRadioButton4StateChanged(evt);
@@ -211,6 +227,11 @@ public class Complaint_form extends javax.swing.JFrame {
         jRadioButton10.setText("Deteriorating Air Quality");
 
         jRadioButton11.setText("Spoiling Scenic Beauty");
+        jRadioButton11.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                jRadioButton11ActionPerformed(evt);
+            }
+        });
 
         jComboBox1.setModel(new DefaultComboBoxModel<>(new String[] { "Wet", "Dry", "Electronic", "Workshop" }));
 
@@ -259,14 +280,14 @@ public class Complaint_form extends javax.swing.JFrame {
                     .addComponent(jLabel1, GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel3, GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
+                            .addComponent(jLabel3)
                             .addComponent(jLabel2)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
                                 .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jRadioButton2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jRadioButton3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jRadioButton4, GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                                    .addComponent(jRadioButton4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jRadioButton1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jRadioButton5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
@@ -287,13 +308,13 @@ public class Complaint_form extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton6, GroupLayout.PREFERRED_SIZE, 165, GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton11)
-                    .addComponent(jRadioButton10)
+                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jRadioButton6, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jRadioButton10, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jRadioButton9)
                     .addComponent(jRadioButton8)
-                    .addComponent(jRadioButton7))
+                    .addComponent(jRadioButton7)
+                    .addComponent(jRadioButton11, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                     .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
@@ -318,21 +339,22 @@ public class Complaint_form extends javax.swing.JFrame {
                         .addComponent(jRadioButton1)
                         .addComponent(jComboBox1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton13))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jLabel5))
-                .addGap(0, 0, 0)
-                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(jComboBox2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jRadioButton4))
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton5)
+                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButton2)
+                            .addComponent(jRadioButton13))
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButton3)
+                            .addComponent(jLabel5))
+                        .addGap(0, 0, 0)
+                        .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jRadioButton4))
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButton5))
+                    .addComponent(jComboBox2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel6)
@@ -353,33 +375,142 @@ public class Complaint_form extends javax.swing.JFrame {
                 .addComponent(jRadioButton9)
                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton10)
-                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton11)
-                    .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRadioButton11))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Describe", jPanel2);
 
+        jLabel7.setFont(new Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel7.setText("Locate your Complaint");
+
+        jLabel9.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel9.setText("Street");
+
+        jTextField3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel10.setText("Locality");
+
+        jLabel11.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel11.setText("District");
+
+        jLabel12.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel12.setText("Comments");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        jButton2.setText("Submit Co-ordinates");
+
+        jButton3.setText("<html><p>Next &#8594</p>");
+
         GroupLayout jPanel3Layout = new GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGap(0, 935, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(290, 290, 290)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel10, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jTextField5)
+                    .addComponent(jTextField4)
+                    .addComponent(jTextField3))
+                .addGap(370, 370, 370))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(346, 346, 346)
+                .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 234, GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addGroup(GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 223, GroupLayout.PREFERRED_SIZE)
+                        .addGap(343, 343, 343))
+                    .addGroup(GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton3, GroupLayout.PREFERRED_SIZE, 129, GroupLayout.PREFERRED_SIZE)
+                        .addGap(87, 87, 87))))
         );
         jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField3, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel10, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextField4, GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel11, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextField5, GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, GroupLayout.PREFERRED_SIZE, 109, GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Locate", jPanel3);
 
+        jLabel13.setFont(new Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel13.setText("Attach Documents");
+
+        jButton4.setText("Attach Image");
+
+        jLabel14.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel14.setText("Submit image of the site/waste ");
+
+        jButton5.setFont(new Font("Tahoma", 1, 14)); // NOI18N
+        jButton5.setText("Submit Complaint");
+
         GroupLayout jPanel4Layout = new GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGap(0, 935, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(364, 364, 364)
+                .addGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel14, GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+                    .addComponent(jLabel13, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton5, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGap(0, 535, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel13, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
+                .addGap(92, 92, 92)
+                .addComponent(jLabel14, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 172, Short.MAX_VALUE)
+                .addComponent(jButton5, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE)
+                .addGap(89, 89, 89))
         );
 
         jTabbedPane1.addTab("Attach", jPanel4);
@@ -420,6 +551,63 @@ public class Complaint_form extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    
+    
+    private void jButton5ActionPerformed(ActionEvent evt) {                                         
+        Connection myConn=null;
+        Statement myStmt=null;
+
+        MapComplaint o = new MapComplaint();
+        Double l1 = o.get_mark1();
+        Double l2 = o.get_mark2();
+
+        String user="root";
+        String pass="1234";
+        //String f_name=jTextField1.getText();
+        //String l_name=jTextField3.getText();
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            myConn =  DriverManager.getConnection("jdbc:mysql://localhost:3306/river_mini?autoReconnect=true&useSSL=false",user,pass);
+            myStmt = myConn.createStatement();
+            String sql="insert into complaint_form (type,affect,gen,distance,street,locality,city,comments,status) values(?,?,?,?,?,?,?,?,?)";
+            PreparedStatement pdt = myConn.prepareStatement(sql);
+            
+            
+            
+            //pdt.setString(1,jTextField1.getText());
+            pdt.setString(2,jTextField3.getText());
+            pdt.setString(3,jTextField5.getText());
+            //pdt.setString(4,jTextField7.getText());
+            //pdt.setString(5,jDateChooser1.getDate());
+            pdt.setString(5,jTextArea1.getText());
+            pdt.setString(6,"Inactive");
+            pdt.setDouble(7,l1);
+            pdt.setDouble(8,l2);
+
+            //pdt.setString(9,xo);
+
+            
+
+            //pdt.setString(1,type);
+
+            pdt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }catch (ClassNotFoundException ex) {
+            Logger.getLogger(Complaint_form.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+    }                                        
+
+    private void jButton3MousePressed(MouseEvent evt) {                                      
+        // TODO add your handling code here:
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MapComplaint().setVisible(true);
+            }
+        });
+    }
     
     public void sysconnection(){
         
@@ -495,6 +683,14 @@ public class Complaint_form extends javax.swing.JFrame {
         jTabbedPane1.setSelectedIndex(1);
     }//GEN-LAST:event_jButton1MousePressed
 
+    private void jTextField3ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jRadioButton11ActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton11ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -550,15 +746,26 @@ public class Complaint_form extends javax.swing.JFrame {
     private ButtonGroup buttonGroup2;
     private ButtonGroup buttonGroup3;
     private JButton jButton1;
+    private JButton jButton2;
+    private JButton jButton3;
+    private JButton jButton4;
+    private JButton jButton5;
     private JComboBox<String> jComboBox1;
     private JComboBox<String> jComboBox2;
     private JLabel jLabel1;
+    private JLabel jLabel10;
+    private JLabel jLabel11;
+    private JLabel jLabel12;
+    private JLabel jLabel13;
+    private JLabel jLabel14;
     private JLabel jLabel2;
     private JLabel jLabel3;
     private JLabel jLabel4;
     private JLabel jLabel5;
     private JLabel jLabel6;
+    private JLabel jLabel7;
     private JLabel jLabel8;
+    private JLabel jLabel9;
     private JPanel jPanel1;
     private JPanel jPanel2;
     private JPanel jPanel3;
@@ -580,9 +787,14 @@ public class Complaint_form extends javax.swing.JFrame {
     private JRadioButton jRadioButton8;
     private JRadioButton jRadioButton9;
     private JScrollPane jScrollPane1;
+    private JScrollPane jScrollPane2;
     private JTabbedPane jTabbedPane1;
+    private JTextArea jTextArea1;
     private JTextField jTextField1;
     private JTextField jTextField2;
+    private JTextField jTextField3;
+    private JTextField jTextField4;
+    private JTextField jTextField5;
     private JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables
 }
