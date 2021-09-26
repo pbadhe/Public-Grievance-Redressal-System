@@ -12,7 +12,9 @@
 - Siddhi Dhonsale (siddhi.d123@gmail.com)
 
 # Installation & Usage
-The project will require an SQL database (requirements understood from the ) to be configured on the host. The code can be directly imported into any modern Java IDE for editing and database configurations.
-The project will generate a runnable jar post compilation which can be directly used as a standalone application. 
+The project will require an SQL database to be configured on the host. Database schema and sample default data is included in the **river_mini.sql** file.
+
+Import the sql file into the database configured on the host. The project code can be directly imported into any modern Java IDE for editing the database configurations (not modular for now).
+The project will generate a runnable jar post compilation, which can be directly used as a standalone application ready for deployment. 
 
 Note: Some API changes to JxMaps may be required according to the use of the host (100 requests per day limit).
